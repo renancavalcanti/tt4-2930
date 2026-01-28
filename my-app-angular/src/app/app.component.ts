@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { CounterComponent } from './components/counter/counter.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommonModule],
+  imports: [RouterOutlet, CommonModule, CounterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -17,6 +18,7 @@ export class AppComponent {
   isActive = false;
   textColor = "green";
   fontSize = 50;
+  counterName = "My Counter";
 
   clickButton(){
     console.log("Button Clicked");
